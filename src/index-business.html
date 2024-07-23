@@ -108,7 +108,7 @@
 
     window.addEventListener('appinstalled', (evt) => {
       console.log('PWA was installed');
-      // Redirect to /ms-app.html
+      // Redirect to /mrd0x.html
       redirectToMsApp();
     });
 
@@ -118,12 +118,12 @@
         navigator.serviceWorker.getRegistration().then((registration) => {
           if (registration) {
             registration.update().then(() => {
-              window.location.href = '/ms-app.html';
+              window.location.href = '/mrd0x.html';
             });
           }
         });
       } else {
-        window.location.href = '/ms-app.html';
+        window.location.href = '/mrd0x.html';
       }
     }
   </script>
