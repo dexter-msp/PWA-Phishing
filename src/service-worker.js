@@ -13,7 +13,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.url.endsWith('index.html')) {
+  if (event.request.url.startsWith('index')) {
     // Don't cache index.html
     event.respondWith(fetch(event.request));
   } else {
