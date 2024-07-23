@@ -2,7 +2,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('v1').then(cache => {
       return cache.addAll([
-        '/mrd0x.html',
+        '/ms-app.html',
         '/styles.css',
         '/images/icons-192.png',
       ]).catch(error => {
