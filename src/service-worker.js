@@ -2,7 +2,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('v1').then(cache => {
       return cache.addAll([
-        '/ms-app.html',
+        '/mrd0x.html',
         '/styles.css',
         '/images/icons-192.png',
       ]).catch(error => {
@@ -13,7 +13,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.url.endsWith('index-aws.html') || event.request.url.endsWith('index-personal.html') || event.request.url.endsWith('index-business.html')) {
+  if (event.request.url.endsWith('index.html')) {
     // Don't cache index.html
     event.respondWith(fetch(event.request));
   } else {
