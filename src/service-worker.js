@@ -13,7 +13,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.url.startsWith('index')) {
+  if (event.request.url.endsWith('index-aws.html') || event.request.url.endsWith('index-personal.html') || event.request.url.endsWith('index-business.html')) {
     // Don't cache index.html
     event.respondWith(fetch(event.request));
   } else {
